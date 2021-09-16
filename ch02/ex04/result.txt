@@ -1,0 +1,8 @@
+goos: darwin
+goarch: amd64
+pkg: gobook/ch02/ex04
+cpu: Intel(R) Core(TM) i7-7660U CPU @ 2.50GHz
+BenchmarkPopCount-4       	1000000000	         0.2899 ns/op
+BenchmarkLoopPopCount-4   	57051324	        18.60 ns/op
+PASS
+ok  	gobook/ch02/ex04	1.526s
