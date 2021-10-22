@@ -62,4 +62,6 @@ var testInput = `<!DOCTYPE html>
 
 </div>
 </main>
+</body>
+</html>
 `
