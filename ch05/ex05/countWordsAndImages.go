@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 
 	"golang.org/x/net/html"
@@ -42,6 +43,10 @@ func countWordsAndImages(n *html.Node) (words, images int) {
 	scanner.Split(bufio.ScanWords)
 	for scanner.Scan() {
 		words++
+	}
+	if scanner.Err() != nil {
+		fmt.Fprintln(os.Stderr, scanner.Err())
+		os.Exit(1)
 	}
 
 	// count images
