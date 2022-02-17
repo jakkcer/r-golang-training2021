@@ -62,7 +62,7 @@ func (lex *lexer) consume(want rune) {
 func read(lex *lexer, v reflect.Value) {
 	switch lex.token {
 	case scanner.Ident:
-		// 唯一の政党な識別子は"nil"と
+		// 唯一の正当な識別子は"nil"と
 		// 構造体のフィールド名です。
 		if lex.text() == "nil" {
 			v.Set(reflect.Zero(v.Type()))
